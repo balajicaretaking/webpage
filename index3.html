@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Balaji Nursing - Quality Care Services in Mumbai</title>
+    <meta name="description" content="Balaji Nursing, led by Dhanalaxmi Ramu Kamala, offers professional and compassionate home nursing care services in Dharavi, Mumbai. Call 8657343490.">
+    <meta name="keywords" content="Balaji Nursing, nursing care Mumbai, home healthcare India, patient care services, Dhanalaxmi Ramu Kamala, elder care Mumbai, post-operative care Dharavi, home nurse Sion, attendant services, critical care at home">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            DEFAULT: '#0D9488',
+                            light: '#99F6E4',
+                            dark: '#0F766E',
+                        },
+                        secondary: {
+                            DEFAULT: '#F97316',
+                            light: '#FB923C',
+                            dark: '#EA580C',
+                        },
+                        neutral: {
+                           light: '#F8FAFC',
+                           DEFAULT: '#6B7280',
+                           medium: '#64748B',
+                           dark: '#1E293B',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* existing custom styles stay untouched */
+        ::-webkit-scrollbar { width:8px; }
+        ::-webkit-scrollbar-track { background:#f1f1f1; }
+        ::-webkit-scrollbar-thumb { background:#0D9488;border-radius:4px;}
+        ::-webkit-scrollbar-thumb:hover { background:#0F766E; }
+        html { scroll-behavior:smooth; }
+        .service-card ul{ list-style-type:disc;padding-left:1.5rem;margin-top:0.75rem; }
+        .service-card ul li{ margin-bottom:0.25rem; }
+    </style>
+</head>
+<body class="bg-neutral-light font-sans antialiased text-neutral-DEFAULT">
+
+    <!-- header stays the same -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <!-- ... (unchanged header code) ... -->
+    </header>
+
+    <!-- HERO SECTION  (background image now used) -->
+    <section
+        class="relative pt-20 pb-24 md:pt-28 md:pb-32 text-white bg-cover bg-center bg-no-repeat"
+        style="background-image:url('https://i.pinimg.com/736x/c5/10/eb/c510ebebbca70739f88e6bebee3529d2.jpg');"
+    >
+        <!-- semi-transparent teal overlay for better contrast -->
+        <div class="absolute inset-0 bg-primary-dark/80"></div>
+
+        <!-- content on top of overlay -->
+        <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                Compassionate Home Nursing Care
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-primary-light">
+                Balaji Nursing provides professional and reliable healthcare services by Dhanalaxmi Ramu Chaudhary in the comfort of your home in Mumbai.
+            </p>
+            <a href="tel:8657343490" class="bg-secondary hover:bg-secondary-dark text-white font-bold text-lg px-10 py-4 rounded-lg shadow-xl transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-secondary-light">
+                Call Dhanalaxmi: 8657343490
+            </a>
+        </div>
+    </section>
+
+    <!-- everything below is identical to the original -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <!-- ... (unchanged) ... -->
+    </section>
+
+    <section id="services" class="py-16 md:py-24 bg-neutral-light">
+        <!-- ... (unchanged) ... -->
+    </section>
+
+    <section id="why-choose-us" class="py-16 md:py-24 bg-white">
+        <!-- ... (unchanged) ... -->
+    </section>
+
+    <footer id="contact" class="bg-neutral-dark text-neutral-light pt-16 pb-8">
+        <!-- ... (unchanged) ... -->
+    </footer>
+
+    <script>
+        /* original JS unchanged */
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuButton.addEventListener('click', () => {
+            const isExpanded = mobileMenu.classList.toggle('hidden');
+            menuButton.setAttribute('aria-expanded', !isExpanded);
+            menuButton.innerHTML = !isExpanded
+              ? `<svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                 </svg>`
+              : `<svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                 </svg>`;
+        });
+        mobileMenu.querySelectorAll('a').forEach(link=>{
+            link.addEventListener('click',()=>{
+                mobileMenu.classList.add('hidden');
+                menuButton.setAttribute('aria-expanded','false');
+                menuButton.innerHTML=`<svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                                       </svg>`;
+            });
+        });
+    </script>
+
+</body>
+</html>
